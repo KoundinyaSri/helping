@@ -73,17 +73,17 @@ reports:
       - location
       - location
     base-directory: location
-    discard-paths: no | yes
+    discard-paths: yes
     file-format: report-format
 artifacts:
   files:
     - arn:aws:s3:::websiteartifacts
     - arn:aws:s3:::websiteartifacts
   name: artifact-name
-  discard-paths: no | yes
+  discard-paths: yes
   base-directory: location
   exclude-paths: excluded paths
-  enable-symlinks: no | yes
+  enable-symlinks: yes
   s3-prefix: prefix
   secondary-artifacts:
     artifactIdentifier:
@@ -91,13 +91,13 @@ artifacts:
         - location
         - location
       name: secondary-artifact-name
-      discard-paths: no | yes
+      discard-paths: no
       base-directory: location
     artifactIdentifier:
       files:
         - arn:aws:s3:::websiteartifacts
         - arn:aws:s3:::websiteartifacts
-      discard-paths: no | yes
+      discard-paths: yes
       base-directory: location
 cache:
   paths:
